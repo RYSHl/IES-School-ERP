@@ -1,0 +1,33 @@
+﻿/* ==============================================================================
+   IES SCHOOL ERP 5.0 - OFFICIAL PRINT STYLES
+   Admit Cards, Marksheets, Fee Vouchers, Payslips & ID Cards
+   ============================================================================== */
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt !important;
+  }
+
+  .sidebar, .top-navbar, .breadcrumb-container, .header-banner, .banner-actions, .btn, .modal-close {
+    display: none !important;
+  }
+
+  .main-wrapper {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .print-area {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+}
