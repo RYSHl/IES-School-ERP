@@ -1,9 +1,4 @@
 
-/**
- * IES School ERP 2026-27
- * Supabase Configuration
- */
-
 (function () {
     "use strict";
 
@@ -13,13 +8,8 @@
     const SUPABASE_PUBLISHABLE_KEY =
         "sb_publishable_-8utN_Uicenlz98OXGiYvw_8xt7nDAp";
 
-    if (!window.supabase) {
-        console.error("IES ERP: Supabase library not loaded.");
-        return;
-    }
-
-    if (window.supabaseClient) {
-        console.warn("IES ERP: Supabase already initialized.");
+    if (!window.supabase || !window.supabase.createClient) {
+        console.error("IES ERP: Supabase SDK failed to load.");
         return;
     }
 
@@ -28,5 +18,5 @@
         SUPABASE_PUBLISHABLE_KEY
     );
 
-    console.log("IES ERP: Supabase client initialized.");
+    console.log("IES ERP: Supabase initialized successfully.");
 })();
